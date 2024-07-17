@@ -45,13 +45,13 @@ export class SignUpComponent {
     }
 
     submit() {
-        this.LoginService.login(this. signupForm.value.email, this. signupForm.value.password).subscribe({
+        this.LoginService.signup(this. signupForm.value.name, this. signupForm.value.email).subscribe({
           next: () => this.toastService.success("Login feito com sucesso!"),
           error: () => this.toastService.console.error("Erro inesperado! Tente novamente mais tarde")
     })
   }
 
     navigate(){
-      this.router.navigate(["signup"])
+      this.router.navigate(["login"])
     }
 }
